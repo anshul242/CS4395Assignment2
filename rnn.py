@@ -30,7 +30,7 @@ class RNN(nn.Module):
         return self.loss(predicted_vector, gold_label)
 
     def forward(self, inputs):
-        # obtain hidden layer representation (https://pytorch.org/docs/stable/generated/torch.nn.RNN.html)
+        # obtain hidden layer representation 
         _, hidden = self.rnn(inputs, torch.zeros(self.numOfLayer, 1, self.h))
         
         # obtain output layer representations
